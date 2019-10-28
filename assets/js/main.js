@@ -4,6 +4,7 @@ var autocomplete;
 var countryRestrict = { 'country': 'us' };
 var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
+var choice;
 
 var countries = {
     'au': {
@@ -107,9 +108,25 @@ function onPlaceChanged() {
 
 // Search for hotels in the selected city, within the viewport of the map.
 function search() {
-    var search = {
+    let choice = 'restaurant';
+    clearMarkers();
+    markers = [];
+
+    if (document.getElementById("cafe").checked) choice = 'cafe';
+    clearMarkers();
+    markers = [];
+    if (document.getElementById("bar").checked) choice = 'bar';
+    clearMarkers();
+    markers = [];
+    if (document.getElementById("hotel").checked) choice = 'lodging';
+    clearMarkers();
+    markers = [];
+
+
+
+    let search = {
         bounds: map.getBounds(),
-        types: ['lodging']
+        types: [choice]
     };
 
     places.nearbySearch(search, function(results, status) {
