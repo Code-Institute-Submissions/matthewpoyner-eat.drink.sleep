@@ -111,7 +111,6 @@ function search() {
     let choice = 'restaurant';
     clearMarkers();
     markers = [];
-
     if (document.getElementById("cafe").checked) choice = 'cafe';
     clearMarkers();
     markers = [];
