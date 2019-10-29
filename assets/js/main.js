@@ -102,6 +102,9 @@ document.getElementById('country').addEventListener(
 
 function clearCity() {
     $("#autocomplete").val('');
+    clearMarkers();
+    clearResults();
+    markers = [];
 }
 
 
@@ -111,6 +114,9 @@ document.getElementById('country').addEventListener(
 
 function clearKeyword() {
     $("#keywordInput").val('');
+    clearMarkers();
+    clearResults();
+    markers = [];
 }
 
 //end of new code
@@ -132,7 +138,9 @@ function onPlaceChanged() {
 // amended code - search for choices in the selected city, within the viewport of the map.
 function search() {
     let keywordInput = document.getElementById("keywordInput").value; //specificity keyword search
-
+    clearMarkers();
+    clearResults();
+    markers = [];
     let choice = 'restaurant';
     clearMarkers();
     markers = [];

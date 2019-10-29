@@ -3,11 +3,12 @@ User Centric Frontend Development Milestone Project
 # eat.drink.sleep(repeat)
 
 ## Overview
-xxxx
+This site is for people who need help to 
 
 ## UX
 <b>[eat.drink.sleep(repeat)](https://matthewpoyner.github.io/eat.drink.sleep/)</b> is a site designed to help users find where they can get something to eat, somewhere to get a coffee or alcoholic drink and lay their head down at the end of the day.
 <br>The site is designed to offer this information to the user in a helpful, user friendly manner.
+<br>
 
 ## User stories
 I emmigrated to New Zealand in February 2019 from the UK<br>I was new to the city where I would now be living and did not know where anything was! I can use this site to easily locate somewhere to grab some food or drink or a place to stay.<br>Because of the city search I can also travel with confidence to other destinations, knowing that I can find what I need in other locations around the world too.
@@ -15,7 +16,7 @@ I emmigrated to New Zealand in February 2019 from the UK<br>I was new to the cit
 Other users worldwide can use this site to find the restaurants, cafes, bars or hotels in their chosen location.
 
 ## Wireframe
-[screen mock up](assets\images\MS2 wireframe.png)
+To view wireframe [click here](https://github.com/matthewpoyner/eat.drink.sleep/blob/master/assets/images/MS2%20wireframe.png)
 
 ## Features
 ### Existing Features
@@ -35,31 +36,44 @@ I would also like to expand the options available to the user, for example "petr
 2. CSS
 3. JavaScript
 4. Bootstrap (4.3.1)
+5. Google Maps API
+6. Google Places API
 
 
 ## Testing
 
 My site has been tested using Google Chrome Developer tools to ensure that the screen changes behaviour on different screen resolutions.
 
+Tested on the following browsers:
+
+Google Chrome
+Mozilla Firefox
+Internet Explorer
+Safari
+
 HTML and CSS has been validated using [W3 HTML validator](https://validator.w3.org)
 JavaScript has been validated using [JSHint](https://validator.w3.org)
 
 ## Deployment
-This site was developed on MS Visual Code<br>
-It was committed to git and pushed to github
+This site was developed with Visual Studio Code<br>
+It was committed to git and pushed to GitHub
 This site is hosted on GitHub pages, deployed from the master branch.
 
 ## To see the deployed website click the link below
 [https://matthewpoyner.github.io/eat.drink.sleep/](https://matthewpoyner.github.io/eat.drink.sleep/) 
+
+### To clone a copy of the code
+1. [Use this link](https://github.com/matthewpoyner/eat.drink.sleep)
+2. Click on Clone or download button
+
+
 ## Credits
-Google Maps documentation
+[Google Maps Platform documentation](https://developers.google.com/maps/documentation/javascript/tutorial)
+
 
 ## Acknowledments
 Thank you to my mentor for pushing me to be better and for offering me valuable feedback.<br>
 Thanks also to my fellow students on Slack for helpful advice.
-
-
-
 
 
 ### This site is for educational use

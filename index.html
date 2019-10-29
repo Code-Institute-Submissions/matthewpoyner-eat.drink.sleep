@@ -45,19 +45,11 @@
             <div class="col-md-8 no-padding">
                 <div id="locationField" class="no-margin input-group">
                     <input id="autocomplete" placeholder="Enter a city" type="text" />
-                    <button class="clearKeyword button" onclick="clearCity()">Clear City</button>
+                    <button class="clearKeyword btn btn-primary btn-sm" onclick="clearCity()">Clear City</button>
                 </div>
             </div>
         </div>
     </div>
-    <!--Code from Google maps documentation-->
-
-
-
-
-
-
-
 
 
     <div id="choice" class="row">
@@ -79,13 +71,13 @@
         </div>
     </div>
 
-    <div id="keywordField">
+    <div id="keywordField" class="no-margin no-padding">
         <input id="keywordInput" placeholder="Enter a keyword" type="text" />
-        <button class="clearKeyword" onclick="clearKeyword()">Clear</button>
+        <button class="clearKeyword btn btn-primary btn-sm" onclick="clearKeyword()">Clear</button>
     </div>
 
     <div>
-        <button class="search-again" onclick="search()">Update Results</button> Click here to update your search results
+        <button class="search-again btn btn-primary btn-sm" onclick="search()">Update Results</button> <span>Click here to update your search results</span>
     </div>
 
     <!--Code from Google maps documentation
