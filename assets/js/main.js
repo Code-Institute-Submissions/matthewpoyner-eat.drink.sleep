@@ -4,7 +4,8 @@ var autocomplete;
 var countryRestrict = { 'country': 'us' };
 var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
-var choice;
+var keyword
+
 
 var countries = {
     'au': {
@@ -88,10 +89,31 @@ function initMap() {
 
     autocomplete.addListener('place_changed', onPlaceChanged);
 
+
     // Add a DOM event listener to react when the user selects a country.
     document.getElementById('country').addEventListener(
         'change', setAutocompleteCountry);
 }
+
+
+//new code to clear the autocomplete field when country changed
+document.getElementById('country').addEventListener(
+    'change', clearCity);
+
+function clearCity() {
+    $("#autocomplete").val('');
+}
+
+
+//new code to clear the keyword field when country changed
+document.getElementById('country').addEventListener(
+    'change', clearKeyword);
+
+function clearKeyword() {
+    $("#keywordInput").val('');
+}
+
+//end of new code
 
 // When the user selects a city, get the place details for the city and
 // zoom the map in on the city.
@@ -106,8 +128,11 @@ function onPlaceChanged() {
     }
 }
 
-// Search for hotels in the selected city, within the viewport of the map.
+
+// amended code - search for choices in the selected city, within the viewport of the map.
 function search() {
+    let keywordInput = document.getElementById("keywordInput").value; //specificity keyword search
+
     let choice = 'restaurant';
     clearMarkers();
     markers = [];
@@ -123,10 +148,15 @@ function search() {
 
 
 
+
+
     let search = {
         bounds: map.getBounds(),
-        types: [choice]
+        types: [choice], //amended to filter results based on radio button entry
+        keyword: [keywordInput] //added to return results with a specfic key word
     };
+
+    //end of amended code
 
     places.nearbySearch(search, function(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -248,7 +278,7 @@ function buildIWContent(place) {
         document.getElementById('iw-phone-row').style.display = 'none';
     }
 
-    // Assign a five-star rating to the hotel, using a black star ('&#10029;')
+    // Assign a five-star rating to the choice, using a black star ('&#10029;')
     // to indicate the rating the hotel has earned, and a white star ('&#10025;')
     // for the rating points not achieved.
     if (place.rating) {

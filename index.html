@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -13,7 +13,7 @@
 <body>
 
     <div class="container-fluid no-margin site-title">
-        <div class="row no-margin">
+        <div class="row-no-gutters no-margin">
             <div class="col-12 no-margin">
                 eat.drink.sleep <span>(repeat)</span>
             </div>
@@ -26,8 +26,8 @@
 
     <div class="col-md-12 no-margin">
         <div class="top-page no-margin"></div>
-        <div class="hotel-search no-margin"> </div>
-        <div id="findhotels no-margin"></div>
+        <div class="hotel-search no-margin"></div>
+        <div id="findhotels" class="no-margin"></div>
     </div>
 
     <div id="controls">
@@ -57,9 +57,6 @@
 
 
 
-
-
-
     <div id="choice" class="row">
         <div class="place-types radio-inline">
             <input onchange="search()" name="type" type="radio" id="restaurant" value="restaurant" checked/>
@@ -79,8 +76,12 @@
         </div>
     </div>
 
+    <div id="keywordField">
+        <input id="keywordInput" type="text" />
+    </div>
+
     <div>
-        <button class="search-again" onclick="search()">Update</button>
+        <button class="search-again" onclick="search()">Update Results</button>
     </div>
 
     <!--Code from Google maps documentation

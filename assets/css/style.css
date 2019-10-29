@@ -27,7 +27,7 @@ table {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: #fff;
+    background: #fbf5f0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -48,12 +48,12 @@ table {
 #listing {
     position: absolute;
     width: 200px;
-    height: 350px;
-    /* modified to be the same height as the map */
+    height: 600px;
+    /* modified to be a little less than the height as the map */
     overflow: auto;
     left: 18px;
     /* modified to be */
-    top: 150px;
+    top: 200px;
     cursor: pointer;
     overflow-x: hidden;
 }
@@ -67,17 +67,23 @@ table {
 }
 
 #controls {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 #autocomplete {
     width: 50%;
-    margin-left: 10px;
+    margin-left: 15px;
+    background: #fbf5f0;
 }
 
 #country {
     width: 45%;
     margin-bottom: 10px;
+    background: #fbf5f0;
+}
+
+.pac-item {
+    background: #fbf5f0;
 }
 
 .placeIcon {
@@ -117,6 +123,10 @@ table {
 
 /* my code */
 
+#keywordInput {
+    background: #fbf5f0;
+}
+
 .no-margin {
     margin-left: 0;
     margin-right: 0;
@@ -132,11 +142,10 @@ table {
 #choice {
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 10px;
 }
 
 .search-again {
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 
@@ -158,18 +167,33 @@ table {
     margin-left: 5px;
 }
 
+#keywordField {
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
 
 /* Media Queries */
 
 @media (min-width:1px) and (max-width:575px) {
     #listing {
-        position: relative;
+        position: absolute;
+        top: 600px;
+        height: 400px
+    }
+    #map {
+        height: 400px;
     }
 }
 
 @media (min-width:576px) and (max-width:767px) {
-    .h2 {
-        font-size: 45px;
+    #listing {
+        position: absolute;
+        top: 600px;
+        height: 400px
+    }
+    #map {
+        height: 400px;
     }
 }
 
@@ -186,7 +210,15 @@ table {
 }
 
 @media (min-width:1200px) and (max-width:4000px) {
-    h2 {
-        font-size: 80px;
+    #listing {
+        position: absolute;
+        top: 185px;
+        height: 750px
     }
+    #map {
+        height: 800px;
+    }
+}
+
+
 }
