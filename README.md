@@ -3,7 +3,7 @@ User Centric Frontend Development Milestone Project
 # eat.drink.sleep(repeat)
 
 ## Overview
-This site is for people who need help to 
+This site is for people who need help to find 
 
 ## UX
 <b>[eat.drink.sleep(repeat)](https://matthewpoyner.github.io/eat.drink.sleep/)</b> is a site designed to help users find where they can get something to eat, somewhere to get a coffee or alcoholic drink and lay their head down at the end of the day.
@@ -65,7 +65,8 @@ This site is hosted on GitHub pages, deployed from the master branch.
 ### To clone a copy of the code
 1. [Use this link](https://github.com/matthewpoyner/eat.drink.sleep)
 2. Click on Clone or download button
-
+3. Select Open in Desktop
+4. Use it in GitHub Desktop
 
 ## Credits
 [Google Maps Platform documentation](https://developers.google.com/maps/documentation/javascript/tutorial)
