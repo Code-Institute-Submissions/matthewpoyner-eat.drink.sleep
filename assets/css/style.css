@@ -43,6 +43,7 @@ table {
     margin-top: 10px;
     height: 650px;
     margin-bottom: 10px;
+    position: center;
 }
 
 #listing {
@@ -77,9 +78,24 @@ table {
 }
 
 #country {
-    width: 45%;
+    width: 75%;
     margin-bottom: 10px;
     background: #fbf5f0;
+    padding: 0px;
+}
+
+.dropdown {}
+
+.dropdown-content {
+    width: 75%;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.button {
+    border-radius: 12px;
 }
 
 .pac-item {
@@ -121,7 +137,11 @@ table {
 }
 
 
-/* my code */
+/* my styling code */
+
+.no-padding {
+    padding: 0px;
+}
 
 #keywordInput {
     background: #fbf5f0;
@@ -218,7 +238,4 @@ table {
     #map {
         height: 800px;
     }
-}
-
-
 }
